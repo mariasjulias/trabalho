@@ -11,13 +11,13 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
       headerImage={
         <Image
-          source={require("@/assets/images/fundo.jpg")}
+          source={require("@/assets/images/fundo.png")}
           style={styles.reactLogo}
         />
       }
     >
       <ThemedView style={styles.tituloContainer}>
-        <ThemedText type="title">Bem vindo ao UniChat!</ThemedText>
+        <ThemedText type="title">Bem vindo!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.tituloContainer}>
@@ -26,11 +26,7 @@ export default function HomeScreen() {
       <ThemedView style={styles.textoContainer}>
         <ThemedText>
           <ThemedText type="defaultSemiBold">
-            UniChat é a solução definitiva para gerenciar todas as suas redes
-            sociais em um único lugar. Com UniChat, você pode conectar e
-            sincronizar suas contas de diversas plataformas, como Facebook,
-            Twitter, Instagram, LinkedIn e muitas outras, facilitando a
-            visualização e a interação com suas redes de forma centralizada.
+            Meus links!
           </ThemedText>
         </ThemedText>
       </ThemedView>
@@ -39,8 +35,7 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedView style={styles.textoContainer}>
         <ThemedText>
-          Me chamo Douglas Eduardo e estou fazendo um aplciativo que contenha
-          algumas redes socias
+          Me chamo Maria Julia e isso é um aplicativo de links de redes sociais
         </ThemedText>
       </ThemedView> 
     </ParallaxScrollView>
