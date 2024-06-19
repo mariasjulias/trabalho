@@ -1,9 +1,9 @@
-import { Image, StyleSheet, Platform } from "react-native";
-
-import { HelloWave } from "@/components/HelloWave";
+import React from "react";
+import { Image, StyleSheet } from "react-native";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { HelloWave } from "@/components/HelloWave";
 
 export default function HomeScreen() {
   return (
@@ -11,46 +11,51 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
       headerImage={
         <Image
-          source={require("@/assets/images/fundo.png")}
+          source={require("@/assets/images/fundo.jpg")}
           style={styles.reactLogo}
         />
       }
     >
-      <ThemedView style={styles.tituloContainer}>
+      <ThemedView style={styles.sectionContainer}>
         <ThemedText type="title">Bem vindo!</ThemedText>
         <HelloWave />
       </ThemedView>
-      <ThemedView style={styles.tituloContainer}>
+
+      <ThemedView style={styles.sectionContainer}>
         <ThemedText type="subtitle">Sobre o app:</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.textoContainer}>
-        <ThemedText>
-          <ThemedText type="defaultSemiBold">
-            Meus links!
-          </ThemedText>
+        <ThemedText style={styles.text}>
+          Este é um aplicativo dedicado a centralizar e compartilhar os links das
+          minhas redes sociais. Aqui você encontrará acesso direto às minhas
+          contas no LinkedIn, Instagram, GitHub e outras plataformas.
+        </ThemedText>
+        <ThemedText style={styles.text}>
+          Além dos links para redes sociais, também compartilho informações sobre
+          meus projetos pessoais e outras atividades relacionadas à minha área
+          de atuação como desenvolvedora de aplicativos.
         </ThemedText>
       </ThemedView>
-      <ThemedView style={styles.tituloContainer}>
+
+      <ThemedView style={styles.sectionContainer}>
         <ThemedText type="subtitle">Sobre mim:</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.textoContainer}>
-        <ThemedText>
-          Me chamo Maria Julia e isso é um aplicativo de links de redes sociais
+        <ThemedText style={styles.text}>
+          Me chamo Maria Julia e sou desenvolvedora de aplicativos. Estou sempre
+          buscando aprender mais e contribuir para projetos interessantes na
+          área de tecnologia.
         </ThemedText>
-      </ThemedView> 
+        <ThemedText style={styles.text}>
+          Este aplicativo que criei é dedicado a compartilhar meus links de
+          redes sociais e outros projetos pessoais.
+        </ThemedText>
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  tituloContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  textoContainer: {
-    gap: 8,
-    marginBottom: 8,
+  sectionContainer: {
+    paddingHorizontal: 16,
+    paddingBottom: 8,
+    marginBottom: 16,
   },
   reactLogo: {
     height: 300,
@@ -58,5 +63,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: "absolute",
+  },
+  text: {
+    marginBottom: 8,
   },
 });

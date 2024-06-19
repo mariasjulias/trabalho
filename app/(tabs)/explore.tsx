@@ -9,7 +9,7 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <Image source={require('@/assets/images/fundo.png')} style={styles.headerImage} />
+        <Image source={require('@/assets/images/fundo.jpg')} style={styles.headerImage} />
       }
     >
       <ThemedView style={styles.titleContainer}>
