@@ -11,7 +11,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
       headerImage={
         <Image
-          source={require("@/assets/images/fundo.jpg")}
+          source={require("@/assets/images/poufundo.jpg")}
           style={styles.reactLogo}
         />
       }
@@ -46,6 +46,12 @@ export default function HomeScreen() {
           Este aplicativo que criei é dedicado a compartilhar meus links de
           redes sociais e outros projetos pessoais.
         </ThemedText>
+
+
+        <Image
+          source={require('@/assets/images/eueu.jpeg')}
+          style={styles.roundedImage}
+        />
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -58,13 +64,19 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   reactLogo: {
-    height: 300,
-    width: 550,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
   },
   text: {
     marginBottom: 8,
+  },
+  roundedImage: {
+    width: 150, 
+    height: 150, 
+    borderRadius: 75, 
+    alignSelf: 'center',
+    marginTop: 12,
   },
 });

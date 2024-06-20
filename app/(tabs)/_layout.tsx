@@ -1,5 +1,6 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
+import { AntDesign } from '@expo/vector-icons'; // Importe AntDesign da biblioteca @expo/vector-icons
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
@@ -19,7 +20,12 @@ export default function TabLayout() {
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <AntDesign
+              name={focused ? 'user' : 'paperclip'}
+              size={24}
+              color={color}
+              style={{ marginBottom: -3 }} // Ajuste opcional para alinhar com outros ícones
+            />
           ),
         }}
       />
@@ -28,7 +34,12 @@ export default function TabLayout() {
         options={{
           title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <AntDesign
+              name={focused ? 'paperclip' : 'user'}
+              size={24}
+              color={color}
+              style={{ marginBottom: -3 }} // Ajuste opcional para alinhar com outros ícones
+            />
           ),
         }}
       />
